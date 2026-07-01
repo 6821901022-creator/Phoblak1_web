@@ -2,6 +2,7 @@
 "use client";
 
 import Link from "next/link";
+
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
@@ -10,7 +11,9 @@ type User = {
   email: string;
   role: "admin" | "user";
 };
-  export default function Navbar() {
+
+
+export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const router = useRouter();
@@ -37,17 +40,15 @@ type User = {
     router.refresh();
   }
 
+
   return (
     <nav className="navbar">
       <div className="container">
         <Link href="/" className="logo">
-          ชัก WEB
+          ROBOT SHOP
         </Link>
 
-        <button
-          className="menu-btn"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
+        <button className="menu-btn" onClick={() => setMenuOpen(!menuOpen)}>
           ☰
         </button>
 
