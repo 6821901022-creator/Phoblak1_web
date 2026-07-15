@@ -45,7 +45,7 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="container">
         <Link href="/" className="logo">
-          ROBOT SHOP
+          Startic SHOP
         </Link>
 
         <button className="menu-btn" onClick={() => setMenuOpen(!menuOpen)}>
@@ -59,6 +59,12 @@ export default function Navbar() {
           <li>
             <Link href="/about">เกี่ยวกับเรา</Link>
           </li>
+           <li>
+              <Link href="/admin/categories">Category</Link>
+            </li>
+            <li>
+              <Link href="/admin/products">Products</Link>
+            </li>
 
           {user && (
             <li>
